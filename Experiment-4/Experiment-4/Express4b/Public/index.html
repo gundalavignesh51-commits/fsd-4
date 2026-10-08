@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Item Management SPA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Item Management SPA</h1>
+
+        <!-- Item Form -->
+        <div class="form-container">
+
+            <h2>Add / Update Item</h2>
+
+            <form id="itemForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Item Name"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Description"
+                    required
+                ></textarea>
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Price"
+                    step="0.01"
+                    required
+                >
+
+                <select id="stockStatus" required>
+                    <option value="">Select Stock Status</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                </select>
+
+                <button type="submit" id="submitBtn">
+                    Add Item
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    onclick="cancelEdit()"
+                    style="display:none;"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Item List -->
+        <div class="items-container">
+
+            <h2>Item List</h2>
+
+            <div id="itemList"></div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
